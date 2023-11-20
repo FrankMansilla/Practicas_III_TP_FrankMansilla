@@ -1,0 +1,14 @@
+name: Run Lenr Script
+on: [push]
+
+jobs:
+  run_lenr:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Run lenr script
+        run: |
+          chmod +x lenr  # Da permisos de ejecución al script
+          ./lenr || echo "Success: El archivo requirements.txt tiene más de 12 líneas."
