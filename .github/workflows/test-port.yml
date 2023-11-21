@@ -1,0 +1,29 @@
+name: Test Port of Python App
+on: [push]
+
+jobs:
+  test_port:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
+
+      - name: Install dependencies
+        run: |
+          pip install -r src/requirements.txt
+          
+      - name: Start Python App
+        run: |
+          cd src
+          python app.py & 
+          sleep 5 
+
+      - name: Test Port
+        run: |
+          netstat -tuln | grep 'LISTEN' | grep ':3359' || exit 1
+          echo "La aplicación se está ejecutando en el puerto 3359"
