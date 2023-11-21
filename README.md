@@ -118,7 +118,7 @@ aws ec2 run-instances \
 
 
 
-  ###Paso 4: Configurar Políticas de Escalado
+  ### Paso 4: Configurar Políticas de Escalado
 
 - Política de Escalado hacia Arriba:
   
@@ -159,7 +159,7 @@ aws autoscaling put-scaling-policy \
 - Descripción:
 Configura una política de escalado que reduce la capacidad si la utilización de CPU es menor al 30%.
 
-###Paso 5: Autorizar Tráfico al Grupo de Seguridad
+### Paso 5: Autorizar Tráfico al Grupo de Seguridad
 ```
 aws ec2 authorize-security-group-ingress \
     --group-name MySecurityGroup \
