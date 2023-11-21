@@ -13,6 +13,10 @@ jobs:
         with:
           python-version: '3.x' # Establece la versión de Python que necesites
 
+      - name: Install dependencies
+        run: |
+          pip install -r src/requirements.txt
+          
       - name: Start Python App
         run: |
           cd src
@@ -23,4 +27,3 @@ jobs:
         run: |
           netstat -tuln | grep 'LISTEN' | grep ':<puerto>' || exit 1
           echo "La aplicación se está ejecutando en el puerto <puerto>"
-
