@@ -1,6 +1,6 @@
 # Practicas Profesionalizantes III - Frank Mansilla
 
-Este proyecto contiene una aplicacion sencilla de python con flask, esta esta integrada por hooks de pre y post commit, dos actions, dockerfile y su docker-compose.
+Este proyecto contiene una aplicacion sencilla de python con flask 
 
 ## Levantar el Proyecto con Python
 
