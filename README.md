@@ -57,4 +57,3 @@ Este proyecto contiene una aplicacion sencilla de python con flask, esta esta in
 
 ---
 
-**Nota:** Asegúrate de personalizar y completar las secciones con la información específica de tu proyecto. Además, proporciona instrucciones adicionales si es necesario, como configuraciones específicas del entorno virtual o Docker, y detalles sobre el script principal del proyecto.
