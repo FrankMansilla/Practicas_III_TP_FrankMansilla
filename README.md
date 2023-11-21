@@ -23,7 +23,7 @@ Este proyecto contiene una aplicacion sencilla de python con flask, esta esta in
 2. **Ejecutar el Proyecto con Python:**
    - Ejecuta el siguiente comando para iniciar el proyecto:
      ```
-     python <nombre_del_script_o_archivo_principal.py>
+     python <app.py>
      ```
 
 ## Levantar el Proyecto con Docker
