@@ -49,7 +49,7 @@ Este proyecto contiene una aplicacion sencilla de python con flask
 
 ### Pre-commit
 
-- El hook pre-commit verifica que el archivo "requeriments.txt" no tenga más de 12 líneas de código antes de realizar el commit. Si excede este límite, el commit se cancela.
+- El hook pre-commit verifica que el proyecto no tenga errores antes de hacer el commit, en el caso de encontrarse un error, el commit se cancela
 
 ### Post-commit
 
