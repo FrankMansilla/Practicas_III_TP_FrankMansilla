@@ -11,7 +11,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
-          python-version: '3.x' # Establece la versión de Python que necesites
+          python-version: '3.x'
 
       - name: Install dependencies
         run: |
@@ -20,10 +20,10 @@ jobs:
       - name: Start Python App
         run: |
           cd src
-          python app.py & # Ejecuta tu aplicación en segundo plano desde la carpeta 'src'
-          sleep 5 # Espera unos segundos para que la aplicación se levante
+          python app.py & 
+          sleep 5 
 
       - name: Test Port
         run: |
-          netstat -tuln | grep 'LISTEN' | grep ':<3359>' || exit 1
-          echo "La aplicación se está ejecutando en el puerto <3359>"
+          netstat -tuln | grep 'LISTEN' | grep ':3359' || exit 1
+          echo "La aplicación se está ejecutando en el puerto 3359"
