@@ -25,5 +25,5 @@ jobs:
 
       - name: Test Port
         run: |
-          netstat -tuln | grep 'LISTEN' | grep ':<puerto>' || exit 1
-          echo "La aplicación se está ejecutando en el puerto <puerto>"
+          netstat -tuln | grep 'LISTEN' | grep ':<3359>' || exit 1
+          echo "La aplicación se está ejecutando en el puerto <3359>"
