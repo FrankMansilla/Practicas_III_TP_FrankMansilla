@@ -12,4 +12,4 @@ def usersHandler():
     return jsonify({"users": users})
 
 if __name__ == '__main__':
-    app.run(debug=True, port=3359) 
+    app.run(debug=True, port=3350) 
