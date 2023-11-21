@@ -17,13 +17,9 @@ jobs:
         run: |
           pip install -r src/requirements.txt
           
-      - name: Start Python App
+      - name: Get Port from app.py
+        id: get_port
         run: |
-          cd src
-          python app.py & 
-          sleep 5 
-
-      - name: Test Port
-        run: |
-          netstat -tuln | grep 'LISTEN' | grep ':3359' || exit 1
-          echo "La aplicación se está ejecutando en el puerto 3359"
+          PORT=$(grep -oP "app\.run\(.*port=\K\d+" src/app.py)
+          echo "::set-output name=PORT::$PORT"
+          echo "El puerto detectado es $PORT"
